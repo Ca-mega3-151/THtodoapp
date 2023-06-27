@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: aliceblue;
+  padding: 40px;
+  border-radius: 10px;
+}
