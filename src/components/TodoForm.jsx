@@ -20,7 +20,7 @@ export default function TodoForm({ onSubmit }) {
         onChange={(e) => setInput(e.target.value)}
       />
 
-      <Button variant="primary">Thêm</Button>
+      <Button variant="primary">Create</Button>
     </form>
   );
 }

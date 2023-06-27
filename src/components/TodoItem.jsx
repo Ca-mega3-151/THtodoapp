@@ -10,7 +10,9 @@ export default function TodoItem({ todo, toggleComplete }) {
 
   return (
     <div className="todo-item">
+    
       <Checkbox checked={todo.completed} onChange={handleToggleComplete} />
+
       {todo.title}
       <Button variant="danger" className="hide">
         Delete
@@ -18,3 +20,4 @@ export default function TodoItem({ todo, toggleComplete }) {
     </div>
   );
 }
+
