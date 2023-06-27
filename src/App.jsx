@@ -161,6 +161,13 @@ export default function App() {
   //đếm số lượng item
   const count = todos.length;
 
+  //xóa 1 item 
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+  
+
   //xóa toàn bộ item
   const deleteAll = () => {
     setTodos([]);
@@ -178,7 +185,7 @@ export default function App() {
         onChange={(value) => setSelectedFilterOption(value)}
       />
 
-      <TodoList todos={filteredTodos} toggleComplete={toggleComplete} />
+      <TodoList todos={filteredTodos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
       <FooterTodoApp count={count} deleteAll={deleteAll} />
     </div>
   );

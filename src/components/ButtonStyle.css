@@ -8,12 +8,12 @@
 }
 
 .button--primary {
-  background-color: rgba(238, 43, 238, 0.9);
+  background-color: rgba(40, 62, 205, 0.9);
   color: #ffffff;
 }
 
 .button--primary:hover {
-  background-color: rgb(238, 43, 238);
+  background-color: rgb(32, 111, 202);
 }
 
 .button--primary:focus,
@@ -34,3 +34,5 @@
 .button--danger:active {
   box-shadow: 0 0 0 3px rgba(241, 60, 60, 0.3);
 }
+
+

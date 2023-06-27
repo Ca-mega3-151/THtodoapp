@@ -3,20 +3,27 @@ import Checkbox from "./Checkbox";
 import Button from "./Button";
 import "./TodoItem.css";
 
-export default function TodoItem({ todo, toggleComplete }) {
+export default function TodoItem({ todo, toggleComplete , deleteTodo}) {
+
+  //checked lấy id 
   const handleToggleComplete = () => {
     toggleComplete(todo.id);
+  };
+
+  //xóa ghi chú 
+  const handleDelete = () => {
+    deleteTodo(todo.id);
   };
 
   return (
     <div className="todo-item">
     
-      <Checkbox checked={todo.completed} onChange={handleToggleComplete} />
+      <input type="checkbox" checked={todo.completed} onChange={handleToggleComplete} />
 
       {todo.title}
-      <Button variant="danger" className="hide">
+      <button variant="danger" className="button hide  button--danger" onClick={handleDelete}>
         Delete
-      </Button>
+      </button>
     </div>
   );
 }
